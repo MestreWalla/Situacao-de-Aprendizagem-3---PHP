@@ -58,7 +58,7 @@ if (isset($_GET['email'])) {
 
         <body>
             <h2 class="titulo">Editar Usuário</h2>
-            <form action="processar_edicao.php" method="post" enctype="multipart/form-data">
+            <form action="processar_edicao_cliente.php" method="post" enctype="multipart/form-data">
                 <table>
                     <tr>
                         <th>Admin</th>
