@@ -1,0 +1,52 @@
+.painelCategorias {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* overflow: hidden; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.categoria {
+    font-family: sans-serif;
+    background-color: var(--primary-color);
+    height:180px;
+    width: 180px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        transform: scale(1.04);
+        filter: brightness(1.2);
+    }
+}
+.categoria img {
+    width: 130px;
+    height: 130px;
+    border-radius: 15px;
+}
+.categoria h5 {
+    margin: 5px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: large;
+    font-family: var(--font-family);
+ }
+ .content h1 {
+    margin-left: 60px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight:600;
+    font-family: var(--font-family);
+ }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: #c3c3c3;
+    margin-top: 120px;
+}

@@ -1,0 +1,95 @@
+.agendamento {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  width: min-content;
+  padding: 30px;
+  border-radius: 20px;
+  height: 600px;
+  font-family: var(--font-family);
+}
+
+#appointment-form {
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.tipoServico {
+  display: flex;
+  background-color: var(--secundary-color);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0 10px 0;
+}
+
+.radio-buttons {
+  display: flex;
+  align-items: center;
+  background-color: var(--secundary-color);
+  box-shadow: var(--secundary-color) 0px 5px 29px 5px;
+  gap: 10px;
+}
+
+.radio-buttons label {
+  cursor: pointer;
+  width: 110px;
+}
+
+.radio-buttons input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.option {
+  position: relative;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  color: var(--primary-color);
+  border-radius: 5px;
+  padding: 10px;
+  gap: 10px;
+}
+
+.option:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.radio-buttons input[type="radio"]:checked + .option {
+  background-color: var(--primary-color);
+  box-shadow: var(--primary-color) 0px 5px 29px 5px;
+  color: var(--text-color);
+}
+
+.radio-buttons span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio-buttons img {
+    height: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 5px;
+}
+
+.btnAgendar {
+  height: 40px;
+  background-color: greenyellow;
+  border-radius: 8px;
+  border-style: none;
+  &:hover {
+    background-color: rgb(147, 245, 0);
+  } &:active {
+    background-color: rgb(124, 167, 39);
+  }
+}

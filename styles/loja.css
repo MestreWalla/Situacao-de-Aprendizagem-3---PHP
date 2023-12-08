@@ -1,0 +1,94 @@
+.filtros {
+    font: var(--font-family);
+    color: var(--text-color);
+    min-width: 170px;
+    height: 450px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    justify-content: left;
+    border-radius: 5px;
+}
+.filtros h3 {
+    text-align: center;
+}
+.produtos {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 5px;
+    /* overflow: hidden; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.produto {
+    font: var(--font-family);
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    min-width: 200px;
+    max-width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    justify-content: space-between;
+}
+.produto img {
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 0px;
+}
+.profuto div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.produto h5 {
+    padding: 5px;
+    margin: 5px;
+    color:grey;
+    /* text-transform: uppercase; */
+    /* font-weight: bold; */
+    font-size:medium;
+}
+.produto h4 {
+    padding: 5px;
+    margin: 5px;
+     text-transform: uppercase;
+     font-weight: bold;
+     font-size: large;
+}
+
+.produto button {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    border-color: gray;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: large;
+    &:hover {
+        background-color: #6ebbbb;
+        & p {
+            color: var(--text-color);
+        }
+    } &:active {
+        background-color: var(--primary-color);
+    }
+}
+
+.content {
+    background-color: rgb(206, 241, 237);
+    padding: 15px;
+    margin-top: 130px;
+    max-width: 1300px;
+    width: 100%;
+    align-self: center;
+    border-radius: 10px;
+    display: flex;
+}
