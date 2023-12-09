@@ -60,6 +60,27 @@
         .delete-button:hover {
             background-color: #b84632;
         }
+
+        .tables-section {
+            margin-top: 40px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
     </style>
 </head>
 
@@ -112,6 +133,29 @@
         } elseif (isset($_POST["delete_table_produtos"])) {
             include("apagarTabelaProdutos.php");
         }
+    }
+    ?>
+    <?php
+    // Código para exibir as tabelas
+    try {
+        $conn = new PDO("mysql:host=127.0.0.1;dbname=sa3pwfe", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+
+        $result = $conn->query("SHOW TABLES");
+        $tables = $result->fetchAll(PDO::FETCH_COLUMN);
+
+        echo '<div class="tables-section">';
+        echo '<h2>Tabelas no Banco de Dados</h2>';
+        echo '<table>';
+        echo '<tr><th>Nome da Tabela</th></tr>';
+
+        foreach ($tables as $table) {
+            echo "<tr><td>$table</td></tr>";
+        }
+
+        echo '</table>';
+        echo '</div>';
+    } catch (PDOException $e) {
+        echo "Erro: " . $e->getMessage();
     }
     ?>
 </body>
