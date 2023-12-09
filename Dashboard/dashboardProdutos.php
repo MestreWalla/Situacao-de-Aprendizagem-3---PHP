@@ -3,11 +3,11 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-include('../Cadastros/conectar.php');
+include('../conectar.php');
 
 // Verificar se o usuário está autenticado
 if (!isset($_SESSION['id'])) {
-    header('Location: ../Cadastros/login.php');
+    header('Location: ../login.php');
     exit();
 }
 
@@ -159,7 +159,7 @@ $resultado = $stmt->get_result();
         </div>
         <div class="links">
             <img src="img/java.png" alt="">
-            <a href="../Cadastros/cadastroProdutos.php">Cadastro de Produtos</a>
+            <a href="dashboardProdutos.php.php">Produtos</a>
         </div>
         <div class="links">
             <img src="img/php.png" alt="">

@@ -163,7 +163,7 @@ $resultado = $stmt->get_result();
         </div>
         <div class="links">
             <img src="img/java.png" alt="">
-            <a href="Cadastros/cadastroProdutos.php">Cadastro de Produtos</a>
+            <a href="dashboardProdutos.php">Produtos</a>
         </div>
         <div class="links">
             <img src="img/php.png" alt="">
