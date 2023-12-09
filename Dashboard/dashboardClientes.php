@@ -156,21 +156,21 @@ $resultado = $stmt->get_result();
 
 <body>
     <header class="Sidebar">
-        <img src="img/logo.png" alt="" class="logo">
+        <img src="../img/logo.png" alt="" class="logo">
         <div class="links">
-            <img src="Img/home.png" alt="">
+            <img src="Img/Cliente.png" alt="">
             <a href="dashboardClientes.php">Clientes</a>
         </div>
         <div class="links">
-            <img src="img/java.png" alt="">
+            <img src="img/Produtos.png" alt="">
             <a href="Cadastros/cadastroProdutos.php">Cadastro de Produtos</a>
         </div>
         <div class="links">
-            <img src="img/php.png" alt="">
+            <img src="img/Produtos.png" alt="">
             <a href="dashboardClientes.php">Loja</a>
         </div>
         <div class="links">
-            <img src="img/swift.png" alt="">
+            <img src="img/Carrinho.png" alt="">
             <a href="dashboardClientes.php">Carrinho</a>
         </div>
     </header>
