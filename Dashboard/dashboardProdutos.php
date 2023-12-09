@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 include('../conectar.php');
 
 // Verificar se o usuário está autenticado
-if (!isset($_SESSION['id'])) {
+if (!isset($_SESSION['email'])) {
     header('Location: ../login.php');
     exit();
 }
