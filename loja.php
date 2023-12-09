@@ -96,82 +96,43 @@
             </form>
         </div>
         <div class="produtos">
-            <div class="produto">
-                <a href="compra.html">
-                <img src="img/racao/caes/01racao-golden-special-para-caes-adultos-frango-e-carne-3310549-15kg-Lado.webp" alt="">
-            </a>
-            <div>
-                    <h5>Ração Golden Special para Cães Adultos Frango e Carne 15 kg</h5>
-                    <h4>R$140,00</h4>
-                </div>
-                <button>Adicionar</button>
-            </div>
+            <?php
+$servername = "127.0.0.1";
+$username = "root";
+$password = ''; // Substitua com sua senha
+$dbname = "sa3pwfe";
 
-            <div class="produto">
-                <img src="img/racao/gatos/01Choice-Gatos-Adultos-Frango-e-Carne-Frente.webp" alt="">
-                <div>
-                    <h5>Ração GranPlus Choice Gatos Adultos Frango e Carne 10,1 kg
-                    </h5>
-                    <h4>R$150,00</h4>
-                </div>
-                <button>Adicionar</button>
-            </div>
+// Cria a conexão
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-            <div class="produto">
-                <img src="img/racao/caes/03Racao-Pedigree-Carne-Frango-e-Cereais-Caes-Filhotes-15-kg-1.webp" alt="">
-                <div>
-                    <h5>Ração Pedigree Filhotes Raças M e G Carne Frango e Cereais 15 kg
-                    </h5>
-                    <h4>R$200,00</h4>
-                </div>
-                <button>Adicionar</button>
-            </div>
+// Verifica a conexão
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
+}
 
-            <div class="produto">
-                <img src="img/racao/passaros/01Racao-Nutropica-para-Calopsitas-Natural.webp" alt="">
-                <div>
-                    <h5>Ração Nutrópica para Calopsitas Natural 1,5 kg</h5>
-                    <h4>R$100,00</h4>
-                </div>
-                <button>Adicionar</button>
-            </div>
+// Consulta para obter os dados dos produtos
+$sql = "SELECT * FROM produtos";
+$result = $conn->query($sql);
 
-            <div class="produto">
-                <img src="img/medicamentos/01Antipulgas-Caes-Simparic-20mg-51-a-10kg-Zoetis.webp" alt="">
-                <div>
-                    <h5>Antipulgas Simparic 5 a 10kg Cães 20mg 1 comprimido
-                    </h5>
-                    <h4>R$100,00</h4>
-                </div>
-                <button>Adicionar</button>
-            </div>
+if ($result->num_rows > 0) {
+    // Exibe os produtos
+    while ($row = $result->fetch_assoc()) {
+        echo '<div class="produto">';
+        echo '<img src="' . $row['imgProduto'] . '" alt="">';
+        echo '<div>';
+        echo '<h5>' . $row['nomeProduto'] . '</h5>';
+        echo '<h4>R$' . number_format($row['preco'], 2, ',', '.') . '</h4>';
+        echo '</div>';
+        echo '<button>Adicionar</button>';
+        echo '</div>';
+    }
+} else {
+    echo "Nenhum produto encontrado.";
+}
 
-            <div class="produto">
-                <img src="img/racao/gatos/03Racao-Origens-Gatos-Castrados-Frango" alt="">
-                <div>
-                    <h5>Ração Origens Gatos Castrados Frango 10,1kg</h5>
-                    <h4>R$170,00</h4>
-                </div>
-                <button>Adicionar</button>
-            </div>
+$conn->close();
+?>
 
-            <div class="produto">
-                <img src="img/racao/roedores/01Nutropica-Hamster-900g.webp" alt="">
-                <div>
-                    <h5>Ração Nutrópica para Hamster 900g</h5>
-                    <h4>R$70,00</h4>
-                </div>
-                <button>Adicionar</button>
-            </div>
-
-            <div class="produto">
-                <img src="img/medicamentos/02Pelo e Derme 1500 DHA + EPA Vetnil 30 Cápsulas.webp" alt="">
-                <div>
-                    <h5>Pelo e Derme 1500 DHA + EPA Vetnil 30 Cápsulas</h5>
-                    <h4>R$80,00</h4>
-                </div>
-                <button>Adicionar</button>
-            </div>
         </div>
     </div>
     <iframe src="rodape.html" frameborder="0" class="rodape"></iframe>
