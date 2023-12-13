@@ -1,13 +1,13 @@
 <?php
 session_start();
-include('../Cadastros/conectar.php');
+include('../conectar.php');
 include('dashboardProdutos.php');
 
-if(isset($_GET['id'])) {
+if (isset($_GET['id'])) {
     $id = urldecode($_GET['id']);
     $produto = obterProdutoPorId($conexao, $id);
 
-    if($produto) {
+    if ($produto) {
         ?>
         <!DOCTYPE html>
         <html lang="pt-br">
@@ -57,33 +57,32 @@ if(isset($_GET['id'])) {
         </head>
 
         <body>
-            <h2>Editar Usuário</h2>
+            <h2 class="titulo">Editar Produto</h2>
             <form action="processar_edicao.php" method="post" enctype="multipart/form-data">
                 <table>
                     <tr>
-                        <th>Admin</th>
-                        <th>Nome</th>
-                        <th>Sobrenome</th>
-                        <th>Nascimento</th>
-                        <th>CPF</th>
-                        <th>Endereço</th>
-                        <th>E-mail</th>
-                        <th>Ações</th>
+                        <th>id</th>
+                        <th>imgProduto</th>
+                        <th>NomeProduto</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                        <th>Tags</th>
+                        <th></th>
                     </tr>
-                    <td><input type="checkbox" name="adm" <?= $produto['adm'] ? 'checked' : '' ?>></td>
                     <td><input type="text" name="id" value="<?= htmlspecialchars($produto['id']) ?>" required></td>
                     <td><input type="text" name="imgProduto" value="<?= htmlspecialchars($produto['imgProduto']) ?>" required>
                     </td>
                     <td><input type="text" name="nomeProduto" value="<?= htmlspecialchars($produto['nomeProduto']) ?>" required>
                     </td>
-                    <td><input type="text" name="descricao" value="<?= htmlspecialchars($produto['descricao']) ?>" required></td>
+                    <td><input type="text" name="descricao" value="<?= htmlspecialchars($produto['descricao']) ?>" required>
+                    </td>
+                    <td><input type="text" name="preco" value="<?= htmlspecialchars($produto['preco']) ?>" required>
+                    </td>
                     <td>
-                        <input type="text" name="preco" value="<?= htmlspecialchars($produto['preco']) ?>" required>
                         <input type="text" name="tag1" value="<?= htmlspecialchars($produto['tag1']) ?>" required>
                         <input type="text" name="tag2" value="<?= htmlspecialchars($produto['tag2']) ?>" required>
                         <input type="text" name="tag3" value="<?= htmlspecialchars($produto['tag3']) ?>" required>
                     </td>
-                    <td><input type="text" name="id" value="<?= htmlspecialchars($produto['id']) ?>" required></td>
                     <td style="display: flex; gap: 10px;">
                         <input type="submit" value="Salvar" class="salvar">
                         <a href="http://localhost/php/Situacao-de-Aprendizagem-3---LMR/php/Dashboard/dashboardProdutos.php">

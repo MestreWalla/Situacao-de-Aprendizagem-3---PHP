@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/siderbar.css">
     <title>Gerenciamento de Banco de Dados</title>
     <style>
         body {
@@ -11,6 +12,7 @@
             margin: 20px;
             padding: 20px;
             background-color: #f4f4f4;
+            margin-left: 50px;
         }
 
         h1 {
@@ -25,6 +27,7 @@
             gap: 20px;
             align-items: center;
         }
+
         form div {
             display: flex;
         }
@@ -71,7 +74,8 @@
             margin-top: 20px;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
@@ -83,6 +87,25 @@
         }
     </style>
 </head>
+<header class="Sidebar">
+    <img src="../img/logo.png" alt="" class="logo" style="border-radius: 50%;">
+    <div class="links">
+        <img src="../Dashboard/Img/Cliente.png" alt="">
+        <a href="../Dashboard/dashboardClientes.php">Clientes</a>
+    </div>
+    <div class="links">
+        <img src="../Dashboard/img/Produtos.png" alt="">
+        <a href="../Dashboard/dashboardProdutos.php">Produtos</a>
+    </div>
+    <div class="links">
+        <img src="img/Carrinho.png" alt="">
+        <a href="../carrinho.html">Carrinho</a>
+    </div>
+    <div class="links">
+        <img src="../img/Database.png" alt="">
+        <a href="../Criar DB/index.php">Banco de Dados</a>
+    </div>
+</header>
 
 <body>
     <h1>Gerenciamento de Banco de Dados</h1>
@@ -91,7 +114,8 @@
         <div>
             <button type="submit" name="create_database"><img src="img/Database.png" alt="">Criar Banco de
                 Dados</button>
-            <button type="submit" name="delete_database" class="delete-button"><img src="img/Delete.png" alt=""></button>
+            <button type="submit" name="delete_database" class="delete-button"><img src="img/Delete.png"
+                    alt=""></button>
         </div>
         <div>
             <button type="submit" name="create_table_carrinho"><img src="img/Carrinho.png" alt="">Criar Tabela
