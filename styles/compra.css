@@ -183,7 +183,7 @@ input[type=number] {
   }
   
   .button:hover {
-    width: 50px;
+    width: 80px;
     border-radius: 30px;
     transition-duration: .3s;
     background-color: rgb(37, 2, 2);
@@ -199,10 +199,10 @@ input[type=number] {
   .button::before {
     position: absolute;
     top: -30px;
-    content: "Delete";
+    content: "Adicioar";
     color: white;
     transition-duration: .3s;
-    font-size: 2px;
+    font-size: 1px;
   }
   
   .button:hover::before {
