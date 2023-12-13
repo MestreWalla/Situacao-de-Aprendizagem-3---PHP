@@ -118,7 +118,7 @@ if ($result->num_rows > 0) {
     // Exibe os produtos
     while ($row = $result->fetch_assoc()) {
         echo '<div class="produto">';
-        echo '<img src="' . $row['imgProduto'] . '" alt="">';
+        echo '<img src="' . "Cadastros/" . $row['imgProduto'] . '" alt="">';
         echo '<div>';
         echo '<h5>' . $row['nomeProduto'] . '</h5>';
         echo '<h4>R$' . number_format($row['preco'], 2, ',', '.') . '</h4>';

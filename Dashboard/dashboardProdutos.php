@@ -48,27 +48,28 @@ if (isset($_GET['delete'])) {
 }
 
 // Função para obter os detalhes de um produto pelo id
-function obterProdutoPorId($conexao, $id) {
+function obterProdutoPorId($conexao, $id)
+{
     $stmt = $conexao->prepare("SELECT * FROM produtos WHERE id = ?");
 
     // Tratar erro na preparação da consulta
-    if(!$stmt) {
-        die("Erro na preparação da consulta: ".$conexao->error);
+    if (!$stmt) {
+        die("Erro na preparação da consulta: " . $conexao->error);
     }
 
     $stmt->bind_param('i', $id);
     $stmt->execute();
 
     // Tratar erro na execução da consulta
-    if($stmt->errno) {
-        die("Erro na execução da consulta: ".$stmt->error);
+    if ($stmt->errno) {
+        die("Erro na execução da consulta: " . $stmt->error);
     }
 
     $resultado = $stmt->get_result();
 
     // Tratar erro ao obter o resultado da consulta
-    if(!$resultado) {
-        die("Erro ao obter resultado da consulta: ".$stmt->error);
+    if (!$resultado) {
+        die("Erro ao obter resultado da consulta: " . $stmt->error);
     }
 
     $produto = $resultado->fetch_assoc();
@@ -88,6 +89,7 @@ $resultado = $stmt->get_result();
 <html>
 
 <head>
+    <link rel="stylesheet" href="../styles/siderbar.css">
     <title>Lista de Produtos</title>
     <!-- Estilos -->
     <style>
@@ -95,11 +97,13 @@ $resultado = $stmt->get_result();
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: white;
         }
 
         table {
             border-collapse: collapse;
             width: 100%;
+            margin-left: 60px;
         }
 
         th,
@@ -152,25 +156,25 @@ $resultado = $stmt->get_result();
 
 <body>
 <header class="Sidebar">
-        <img src="img/logo.png" alt="" class="logo">
+        <img src="../img/logo.png" alt="" class="logo" style="border-radius: 50%;">
         <div class="links">
-            <img src="Img/home.png" alt="">
+            <img src="Img/Cliente.png" alt="">
             <a href="dashboardClientes.php">Clientes</a>
         </div>
         <div class="links">
-            <img src="img/java.png" alt="">
-            <a href="dashboardProdutos.php.php">Produtos</a>
+            <img src="img/Produtos.png" alt="">
+            <a href="dashboardProdutos.php">Produtos</a>
         </div>
         <div class="links">
-            <img src="img/php.png" alt="">
-            <a href="dashboardClientes.php">Loja</a>
+            <img src="img/Carrinho.png" alt="">
+            <a href="../carrinho.html">Carrinho</a>
         </div>
         <div class="links">
-            <img src="img/swift.png" alt="">
-            <a href="dashboardClientes.php">Carrinho</a>
+            <img src="../img/Database.png" alt="">
+            <a href="../Criar DB/index.php">Banco de Dados</a>
         </div>
     </header>
-    <h2>Lista de Produtos</h2>
+    <h2 class="titulo">Lista de Produtos</h2>
     <table>
         <tr>
             <th>ID</th>
@@ -187,7 +191,7 @@ $resultado = $stmt->get_result();
         if ($resultado->num_rows > 0) {
             while ($row = $resultado->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>" . (isset($row['id']) ? $row['id'] : '') . "</td>";
+                echo "<td>" . $row['id'] . "</td>";
                 echo "<td>" . $row['imgProduto'] . "</td>";
                 echo "<td>" . $row['nomeProduto'] . "</td>";
                 echo "<td>" . $row['descricao'] . "</td>";
@@ -196,8 +200,8 @@ $resultado = $stmt->get_result();
                 echo "<td>" . $row['tag2'] . "</td>";
                 echo "<td>" . $row['tag3'] . "</td>";
                 echo "<td>
-                <a class='edit-button' href='editarProduto.php?id=".urlencode($row['id'])."'>Editar</a>
-                    <a class='delete-button' href='cadastroProdutos.php?delete=" . $row['id'] . "' onclick='return confirmDelete(this)'>Excluir</a>
+                <a class='edit-button' href='editar_Produto.php?id=" . urlencode($row['id']) . "'>Editar</a>
+                <a class='delete-button' href='dashboard_Produtos.php?delete=" . $row['id'] . "' onclick='return confirmDelete(this)'>Excluir</a>
                     </td>";
                 echo "</tr>";
             }
@@ -217,8 +221,9 @@ $resultado = $stmt->get_result();
         }
     </script>
 </body>
+
 </html>
 <?php
 // Fechar a conexão com o banco de dados
-$conexao->close();
+// $conexao->close();
 ?>
