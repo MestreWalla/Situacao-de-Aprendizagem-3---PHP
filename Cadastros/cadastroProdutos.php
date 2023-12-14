@@ -206,23 +206,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
-    <header class="Sidebar">
-        <img src="img/logo.png" alt="" class="logo">
+<header class="Sidebar">
+        <img src="../img/logo.png" alt="" class="logo" style="border-radius: 50%;">
         <div class="links">
-            <img src="Img/home.png" alt="">
+            <img src="../dashboard/img/Cliente.png" alt="">
             <a href="dashboardClientes.php">Clientes</a>
         </div>
         <div class="links">
-            <img src="img/java.png" alt="">
-            <a href="Cadastros/cadastroProdutos.php">Cadastro de Produtos</a>
+            <img src="../dashboard/img/Produtos.png" alt="">
+            <a href="dashboardProdutos.php">Produtos</a>
         </div>
         <div class="links">
-            <img src="img/php.png" alt="">
-            <a href="dashboardClientes.php">Loja</a>
+            <img src="../dashboard/img/Carrinho.png" alt="">
+            <a href="../carrinho.html">Carrinho</a>
         </div>
         <div class="links">
-            <img src="img/swift.png" alt="">
-            <a href="dashboardClientes.php">Carrinho</a>
+            <img src="../img/Database.png" alt="">
+            <a href="../Criar DB/index.php">Banco de Dados</a>
         </div>
     </header>
     <div class="cadastro-container">
