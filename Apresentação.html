@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuuQueMia - Pet Shop</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #2ecc71;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #2ecc71;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            /* Borda arredondada */
+            margin: 10px 0;
+            /* Margem superior e inferior de 10 pixels */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Sombra suave */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>AuuQueMia - Pet Shop</h1>
+    </header>
+
+    <section id="briefing">
+        <h2>Briefing</h2>
+        <p>Criamos um briefing simulando o pedido de um cliente para um site de uma casa de ração:</p>
+        <ul>
+            <li>Definir o nome:
+                <p>◦ AuuQueMia (Uma brincadeira com a palavra “Alquimia”).</p>
+            </li>
+            <li>Definir qual o tamanho da empresa.
+                <p>◦ Empresa de porte médio, uma loja física.</p>
+            </li>
+            <li>Definir ramo de atuação, serviços e produtos que serão ofertados no site.
+                <p>◦ Venda de itens para Pets (Cães, Gatos, Pequenos roedores e aves): ração, medicamentos, acessórios,
+                    brinquedos, etc;</p>
+                <p>◦ Prestação de serviços: Banho, Tosa e Aplicação de Vacinas;</p>
+            </li>
+            <li>Definir identidade visual.
+                <p>◦ Paleta de cores simples e harmônica:</p>
+                <div>
+                    <p>rgb(35, 144, 131)</p>
+                </div>
+                <div>
+                    <p>rgb(195, 195, 19)</p>
+                </div>
+                <div>
+                    <p>rgb(206, 241, 237)</p>
+                </div>
+                <p>◦ Fonte simples e bem legível e agradável:</p>
+                <div>
+                    <p>font-family: Arial, Helvetica, sans-serif;</p>
+                </div>
+                <p>◦ Logo (criada por I.A.) remetendo ao nome da empresa, contendo a cor verde, um cão e um gato e uma
+                    poção:</p>
+                <img src="img/logo.png" alt="logo">
+            </li>
+        </ul>
+    </section>
+
+    <section id="layoutDesign">
+        <h2>Layout e Design</h2>
+        <p>Iniciamos a criação básica do layout do site, definindo quais elementos seriam apresentados nas páginas
+            principais. Posteriormente usamos o Figma para por em prática as ideias de Lyout e Desing. Fizemos um
+            projeto de Alta Complexidade contendo 3 páginas: Principal, Loja e Contato.</p>
+
+        <h3>Página Principal</h3>
+        <img src="imgApresentacao/FigmaInicio.png" alt="Inicio Figma">
+        <p>Na página principal inserimos (na ordem de cima para baixo):</p>
+        <ul>
+            <li>• O “Header”;</li>
+            <li>• Um Carousel;</li>
+            <li>• Uma janela de vídeo;</li>
+            <li>• Painel de “Cards”;</li>
+            <li>• O “Footer”. </li>
+        </ul>
+        <p>O “Header” possui um “Menu Hamburguer”, Logo da Loja, uma barra de pesquisa, um atalho para “Login” e
+            “Cadastro” e um atalho para o carrinho de compras, todos no mesmo alinhamento. Abaixo temos atalhos (botões)
+            para as principais páginas do site ( Ínicio, Loja, Serviços, Sobre e Contato).
+        </p>
+        <img src="imgApresentacao/FigmaHeader.png" alt="Header Figma">
+        <p>O “Caroussel” é de transição simples através dos botões nas extremidades. Ele é constituído por 3 imagens que
+            destacam pontos de intersse que a loja pode oferecer ao cliente, e por isso deve chamar a atenção. Ocupa
+            toda a largura da página e tem cerca de 600px de altura.
+        </p>
+        <img src="imgApresentacao/FigmaCarroussel.png" alt="Carroussel Figma">
+        <p>O Painel de CATEGORIAS, é constituído por 12 ”Cards” dividido em duas linhas. Ele apresenta todas as
+            categorias oferecidas pela loja, sendo tipos de animais ou produtos. Cada “Card” possui uma legenda e imagem
+            correspondente e serve de link para uma outra página.
+        </p>
+        <img src="imgApresentacao/FigmaCategorias.png" alt="Categorias Figma">
+        <p>A janela de vídeo Possui o Nome da marca em destaque “AUU QUE MIA”, uma janela de vídeo central mostrando
+            Tudo que a loja oferece, como produtos e serviços. De cada lado temos a Logo da loja em Destaque!
+        </p>
+        <img src="imgApresentacao/FigmaVideo.png" alt="Video Figma">
+        <p>O “Footer” possui a Logo em destaque à esquerda. Um texto com indicação das Redes Sociais e seus respectivos
+            Ícones que servem de links para cada uma delas (X, Instagram, Facebook e YouTube).
+            Abaixo dividido em3 colunas há informações importantes sobre a empresa (Institucional, Atendimento,
+            Cliente).
+        </p>
+        <img src="imgApresentacao/FigmaRodape.png" alt="Figma Rodape">
+
+        <h3>Loja</h3>
+        <img src="imgApresentacao/FigmaLoja.png" alt="Figma Loja">
+        <p>Na página Loja inserimos (na ordem de cima para baixo):</p>
+        <ul>
+            <li>• O “Header”;</li>
+            <li>• Painel de Filtros;</li>
+            <li>• Painel de “Cards”;</li>
+            <li>• O “Footer”. </li>
+        </ul>
+        <img src="imgApresentacao/FigmaFiltros.png" alt="Filtros Figma">
+        <p>O Painel de Filtros fica disposto verticalmente do lado esquerdo da página. É dividida em 3 partes (Animais,
+            Seção e Higiene) e cada uma dela tem mais 3 sub categorias.
+        </p>
+        <img src="imgApresentacao/FigmaLoja2.png" alt="Cards Loja Figma">
+        <p>O Painel de Filtros fica disposto verticalmente do lado esquerdo da página. É dividida em 3 partes (Animais,
+            Seção e Higiene) e cada uma dela tem mais 3 sub categorias.
+        </p>
+
+        <h3>Contato</h3>
+        <img src="imgApresentacao/FigmaContato.png" alt="Contato Figma">
+        <p>Na página Contato inserimos (na ordem de cima para baixo):</p>
+        <ul>
+            <li>• O “Header”;</li>
+            <li>• Painel Horário de Atendimento, Mapa e Endereço;</li>
+            <li>• Canal de comunicação e Redes Sociais”;</li>
+            <li>• Informações do Aplicativo da Loja;</li>
+            <li>• O “Footer”.</li>
+        </ul>
+        <img src="imgApresentacao/FigmaContato2.png" alt="Contato Figma">
+        <p>O Painel de Contato é dividido em 3 partes dispostos em coluna (Horário de Atendimento, Mapa com link para
+            Google Maps e Endereço.
+        </p>
+        <img src="imgApresentacao/FigmaFaleConosco.png" alt="Fale Conosco Figma">
+        <p>O Painel Fale Connosco de é dividido em 2 partes dispostos em linhas. A primeira tem 3 botões para os canais
+            de Atendimento (WhatsApp, Chat, E-mail). A segunda tem 4 ícones das Redes Sociais.
+        </p>
+        <img src="imgApresentacao/FigmaApp.png" alt="App Figma">
+        <p>O Painel de App, Possui uma Imagem que mostra o App no Celular, Um QR Code para fazer o Download do App (App
+            Store e Google Play) e ao lado Informações sobre o App. </p>
+    </section>
+
+    <section id="comparacaoFigma">
+        <h1>COMPARAÇÃO DO FIGMA COM O PROJETO FINAL</h1>
+        <h2>Pagina Inicial</h2>
+        <img src="imgApresentacao/FigmaInicio.png" alt="Inicio Figma">
+        <img src="imgApresentacao/InicioGif.gif" alt="Inicio Site Final">
+        <h5>Modificações:</h5>
+        <p>
+            No “Header”, os botões ganharam um design mais simples inicialmente, e ganha movimento quando o mouse é
+            passado.
+            As Imagens do Carousel foram inseridas.
+            Foi retirado o Painel de Vídeo.
+            No “Footer” foi rertirado os ícones de redes sociais e minimizada as informações.
+        </p>
+
+        <h2>Loja:</h2>
+        <img src="imgApresentacao/FigmaLoja.png" alt="Loja Figma">
+        <img src="" alt="Loja Site Final">
+        <h5>Modificações:</h5>
+        <p>No “Header”, os botões ganharam um design mais simples inicialmente, e ganha movimento quando o mouse é
+            passado.
+            A Disposição dos Cards foi mudada para 2 Linhas e 4 Colunas. E as Imagens e Informações dos produtos foram
+            inseridas.
+            No “Footer” foi rertirado os ícones de redes sociais e minimizada as informações.
+        </p>
+
+        <h2>Contato:</h2>
+        <img src="imgApresentacao/FigmaContato.png" alt="Contato Figma">
+        <img src="imgApresentacao/ContatoSite.png" alt="Contato Site Final">
+        <h5>Modificações:</h5>
+        <p>No “Header”, os botões ganharam um design mais simples inicialmente, e ganha movimento quando o mouse é
+            passado.
+            A Disposição dos Cards foi mudada para 2 Linhas e 4 Colunas. E as Imagens e Informações dos produtos foram
+            inseridas.
+            No “Footer” foi rertirado os ícones de redes sociais e minimizada as informações.
+        </p>
+    </section>
+
+    <section id="paginasAdicionais">
+        <h2>Páginas Adicionais</h2>
+        <p>Foram feitas páginas adicionais, mantendo padrão de Cores, Layout e Design.</p>
+        <h5>Serviços:</h5>
+        <img src="imgApresentacao/ServicoSite.png" alt="Serviço Site Final">
+        <h5>Compra:<h5>
+                <img src="imgApresentacao/CompraSite.png" alt="Compra Site Final">
+    </section>
+
+    <section id="conclusao">
+        <h2>Conclusão sobre Layout e Design</h2>
+        <p>O Layout e Design foram escolhidos para serem simples e funcionais. A GUI foi pensada para usuários de todas
+            as idades. É simples e sem poluição visual e Multifunções desnecessárias. Sendo assim muito intuitivo,
+            rápido e direto para oferecer os produtos e serviços.</p>
+        <!-- Adicione o conteúdo da Conclusão aqui -->
+    </section>
+
+    <section id="codigoProjeto">
+        <h2>Código do Projeto</h2>
+        <p>Todas as páginas foram feitas em sua maioria apenas com códigos html, Css e JS (PHP para DB). Optamos por não
+            utilizar Bootstrap como ferramenta. Todos os efeitos visuais foram feitos por códigos. Dividimos o projeto
+            em pastas (img, js, php, styles).</p>
+        <h5>Páginas (HTML)</h5>
+        <p>A Base dos códigos são “div” e “classes”. Assim conseguimos posicionar, estilizar e formatar da maneira que
+            for necessária. Seja através de Css ou Js.</p>
+        <img src="imgApresentacao/PaginasHTML.png" alt="HTML">
+        <h5>Páginas (CSS)</h5>
+        <p>Temos um Css para cada página e um “root” para ser utilizado de base para todas. O CSS foi usado também para
+            dar efeitos ao passar o Mouse por exemplo.</p>
+        <img src="imgApresentacao/PaginasCSS.png" alt="CSS">
+        <h5>Páginas (JavaScript)</h5>
+        <p>O JS foi usado em poucas páginas, como carrinho e login.</p>
+        <img src="imgApresentacao/PaginasJS.png" alt="JS">
+        <!-- Adicione o conteúdo do Código do Projeto aqui -->
+    </section>
+
+    <section id="desenvolvimentoBackend">
+        <h2>Desenvolvimento Back End</h2>
+        <p>Utilizamos a Linguagem PHP para o desenvolvimento do Backend.</p>
+        <p>Criamos um banco de dados (Xampp) para alocar todos os dados de clientes e produtos.</p>
+        <p> Desenvolvemos uma ferramenta (página) para criação do Banco de Dados e Tabelas. Assim é muito mais simples e
+            prático.</p>
+        <!-- Adicione o conteúdo do Desenvolvimento Back End aqui -->
+    </section>
+
+    <footer>
+        <p>Todo projeto pode ser encontrado no GitHub: <a
+                href="https://github.com/MestreWalla/Situacao-de-Aprendizagem-3---LMR.git" target="_blank">GitHub</a>
+        </p>
+    </footer>
+
+    <script>
+        /* Adicione aqui seus scripts JavaScript */
+    </script>
+
+</body>
+
+</html>
