@@ -47,7 +47,7 @@
             color: white;
             text-align: center;
             padding: 10px;
-            position: fixed;
+            /* position: fixed; */
             bottom: 0;
             width: 100%;
         }
@@ -61,11 +61,18 @@
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            /* Borda arredondada */
             margin: 10px 0;
-            /* Margem superior e inferior de 10 pixels */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            /* Sombra suave */
+        }
+
+        .comp {
+            display: flex;
+        }
+
+        .zoomed {
+            transform: scale(1.5);
+            transition: transform 0.3s ease;
+            z-index: 9999;
         }
     </style>
 </head>
@@ -94,19 +101,29 @@
             <li>Definir identidade visual.
                 <p>◦ Paleta de cores simples e harmônica:</p>
                 <div>
-                    <p style="background-color: #239083; height: 40px; justify-content: center; border-radius: 15px; width: 400px; display: flex; align-items: center; font-weight: bolder;">--primary-color: #239083;</p>
+                    <p
+                        style="background-color: #239083; height: 40px; justify-content: center; border-radius: 15px; width: 400px; display: flex; align-items: center; font-weight: bolder;">
+                        --primary-color: #239083;</p>
                 </div>
                 <div>
-                    <p style="background-color: rgb(206, 241, 237); height: 40px; justify-content: center; border-radius: 15px; width: 400px; display: flex; align-items: center; font-weight: bolder;">--secundary-color: rgb(206, 241, 237);</p>
+                    <p
+                        style="background-color: rgb(206, 241, 237); height: 40px; justify-content: center; border-radius: 15px; width: 400px; display: flex; align-items: center; font-weight: bolder;">
+                        --secundary-color: rgb(206, 241, 237);</p>
                 </div>
                 <div>
-                    <p style="background-color: #c3c3c3;; height: 40px; justify-content: center; border-radius: 15px; width: 400px; display: flex; align-items: center; font-weight: bolder;">--tertiary-color: #c3c3c3;</p>
+                    <p
+                        style="background-color: #c3c3c3;; height: 40px; justify-content: center; border-radius: 15px; width: 400px; display: flex; align-items: center; font-weight: bolder;">
+                        --tertiary-color: #c3c3c3;</p>
                 </div>
                 <div>
-                    <p style="background-color: white; height: 40px; justify-content: center; border-radius: 15px; width: 400px; display: flex; align-items: center; font-weight: bolder; border-width: 1px; border-style: dashed;">--quaternary-color: white;</p>
+                    <p
+                        style="background-color: white; height: 40px; justify-content: center; border-radius: 15px; width: 400px; display: flex; align-items: center; font-weight: bolder; border-width: 1px; border-style: dashed;">
+                        --quaternary-color: white;</p>
                 </div>
                 <div>
-                    <p style="background-color: green; height: 40px; justify-content: center; border-radius: 15px; width: 400px; display: flex; align-items: center; font-weight: bolder;">--quinary-color: green;</p>
+                    <p
+                        style="background-color: green; height: 40px; justify-content: center; border-radius: 15px; width: 400px; display: flex; align-items: center; font-weight: bolder;">
+                        --quinary-color: green;</p>
                 </div>
                 <p>◦ Fonte simples e bem legível e agradável:</p>
                 <div>
@@ -114,7 +131,7 @@
                 </div>
                 <p>◦ Logo (criada por I.A.) remetendo ao nome da empresa, contendo a cor verde, um cão e um gato e uma
                     poção:</p>
-                <img src="img/logo.png" alt="logo" style="height: 200px; border-radius: 50%;">
+                <img src="img/logo.png" alt="logo" class="zoomable" style="height: 200px; border-radius: 50%;">
             </li>
         </ul>
     </section>
@@ -126,78 +143,78 @@
             projeto de Alta Complexidade contendo 3 páginas: Principal, Loja e Contato.</p>
 
         <h3>Página Principal</h3>
-        <img src="imgApresentacao/FigmaInicio.png" alt="Inicio Figma">
+        <img src="imgApresentacao/FigmaInicio.png" class="zoomable" alt="Inicio Figma">
         <p>Na página principal inserimos (na ordem de cima para baixo):</p>
         <ul>
-            <li>• O “Header”;</li>
-            <li>• Um Carousel;</li>
-            <li>• Uma janela de vídeo;</li>
-            <li>• Painel de “Cards”;</li>
-            <li>• O “Footer”. </li>
+            <li>O “Header”;</li>
+            <li>Um Carousel;</li>
+            <li>Uma janela de vídeo;</li>
+            <li>Painel de “Cards”;</li>
+            <li>O “Footer”. </li>
         </ul>
         <p>O “Header” possui um “Menu Hamburguer”, Logo da Loja, uma barra de pesquisa, um atalho para “Login” e
             “Cadastro” e um atalho para o carrinho de compras, todos no mesmo alinhamento. Abaixo temos atalhos (botões)
             para as principais páginas do site ( Ínicio, Loja, Serviços, Sobre e Contato).
         </p>
-        <img src="imgApresentacao/FigmaHeader.png" alt="Header Figma">
+        <img src="imgApresentacao/FigmaHeader.png" class="zoomable" alt="Header Figma">
         <p>O “Caroussel” é de transição simples através dos botões nas extremidades. Ele é constituído por 3 imagens que
             destacam pontos de intersse que a loja pode oferecer ao cliente, e por isso deve chamar a atenção. Ocupa
             toda a largura da página e tem cerca de 600px de altura.
         </p>
-        <img src="imgApresentacao/FigmaCarroussel.png" alt="Carroussel Figma">
+        <img src="imgApresentacao/FigmaCarroussel.png" class="zoomable" alt="Carroussel Figma">
         <p>O Painel de CATEGORIAS, é constituído por 12 ”Cards” dividido em duas linhas. Ele apresenta todas as
             categorias oferecidas pela loja, sendo tipos de animais ou produtos. Cada “Card” possui uma legenda e imagem
             correspondente e serve de link para uma outra página.
         </p>
-        <img src="imgApresentacao/FigmaCategorias.png" alt="Categorias Figma">
+        <img src="imgApresentacao/FigmaCategorias.png" class="zoomable" alt="Categorias Figma">
         <p>A janela de vídeo Possui o Nome da marca em destaque “AUU QUE MIA”, uma janela de vídeo central mostrando
             Tudo que a loja oferece, como produtos e serviços. De cada lado temos a Logo da loja em Destaque!
         </p>
-        <img src="imgApresentacao/FigmaVideo.png" alt="Video Figma">
+        <img src="imgApresentacao/FigmaVideo.png" class="zoomable" alt="Video Figma">
         <p>O “Footer” possui a Logo em destaque à esquerda. Um texto com indicação das Redes Sociais e seus respectivos
             Ícones que servem de links para cada uma delas (X, Instagram, Facebook e YouTube).
             Abaixo dividido em3 colunas há informações importantes sobre a empresa (Institucional, Atendimento,
             Cliente).
         </p>
-        <img src="imgApresentacao/FigmaRodape.png" alt="Figma Rodape">
+        <img src="imgApresentacao/FigmaRodape.png" class="zoomable" alt="Figma Rodape">
 
         <h3>Loja</h3>
-        <img src="imgApresentacao/FigmaLoja.png" alt="Figma Loja">
+        <img src="imgApresentacao/FigmaLoja.png" class="zoomable" alt="Figma Loja">
         <p>Na página Loja inserimos (na ordem de cima para baixo):</p>
         <ul>
-            <li>• O “Header”;</li>
-            <li>• Painel de Filtros;</li>
-            <li>• Painel de “Cards”;</li>
-            <li>• O “Footer”. </li>
+            <li>O “Header”;</li>
+            <li>Painel de Filtros;</li>
+            <li>Painel de “Cards”;</li>
+            <li>O “Footer”. </li>
         </ul>
-        <img src="imgApresentacao/FigmaFiltros.png" alt="Filtros Figma">
+        <img src="imgApresentacao/FigmaFiltros.png" class="zoomable" alt="Filtros Figma">
         <p>O Painel de Filtros fica disposto verticalmente do lado esquerdo da página. É dividida em 3 partes (Animais,
             Seção e Higiene) e cada uma dela tem mais 3 sub categorias.
         </p>
-        <img src="imgApresentacao/FigmaLoja2.png" alt="Cards Loja Figma">
+        <img src="imgApresentacao/FigmaLoja2.png" class="zoomable" alt="Cards Loja Figma">
         <p>O Painel de Filtros fica disposto verticalmente do lado esquerdo da página. É dividida em 3 partes (Animais,
             Seção e Higiene) e cada uma dela tem mais 3 sub categorias.
         </p>
 
         <h3>Contato</h3>
-        <img src="imgApresentacao/FigmaContato.png" alt="Contato Figma">
+        <img src="imgApresentacao/FigmaContato.png" class="zoomable" alt="Contato Figma">
         <p>Na página Contato inserimos (na ordem de cima para baixo):</p>
         <ul>
-            <li>• O “Header”;</li>
-            <li>• Painel Horário de Atendimento, Mapa e Endereço;</li>
-            <li>• Canal de comunicação e Redes Sociais”;</li>
-            <li>• Informações do Aplicativo da Loja;</li>
-            <li>• O “Footer”.</li>
+            <li>O “Header”;</li>
+            <li>Painel Horário de Atendimento, Mapa e Endereço;</li>
+            <li>Canal de comunicação e Redes Sociais”;</li>
+            <li>Informações do Aplicativo da Loja;</li>
+            <li>O “Footer”.</li>
         </ul>
-        <img src="imgApresentacao/FigmaContato2.png" alt="Contato Figma">
+        <img src="imgApresentacao/FigmaContato2.png" class="zoomable" alt="Contato Figma">
         <p>O Painel de Contato é dividido em 3 partes dispostos em coluna (Horário de Atendimento, Mapa com link para
             Google Maps e Endereço.
         </p>
-        <img src="imgApresentacao/FigmaFaleConosco.png" alt="Fale Conosco Figma">
+        <img src="imgApresentacao/FigmaFaleConosco.png" class="zoomable" alt="Fale Conosco Figma">
         <p>O Painel Fale Connosco de é dividido em 2 partes dispostos em linhas. A primeira tem 3 botões para os canais
             de Atendimento (WhatsApp, Chat, E-mail). A segunda tem 4 ícones das Redes Sociais.
         </p>
-        <img src="imgApresentacao/FigmaApp.png" alt="App Figma">
+        <img src="imgApresentacao/FigmaApp.png" class="zoomable" alt="App Figma">
         <p>O Painel de App, Possui uma Imagem que mostra o App no Celular, Um QR Code para fazer o Download do App (App
             Store e Google Play) e ao lado Informações sobre o App. </p>
     </section>
@@ -205,8 +222,11 @@
     <section id="comparacaoFigma">
         <h1>COMPARAÇÃO DO FIGMA COM O PROJETO FINAL</h1>
         <h2>Pagina Inicial</h2>
-        <img src="imgApresentacao/FigmaInicio.png" alt="Inicio Figma">
-        <img src="imgApresentacao/InicioGif.gif" alt="Inicio Site Final">
+        <div class="comp">
+            <img src="imgApresentacao/FigmaInicio.png" class="zoomable" alt="Inicio Figma">
+            <img src="imgApresentacao/InicioGif.gif" class="zoomable" alt="Inicio Site Final"
+                style="width: 70%; height: 600px;">
+        </div>
         <h5>Modificações:</h5>
         <p>
             No “Header”, os botões ganharam um design mais simples inicialmente, e ganha movimento quando o mouse é
@@ -217,8 +237,11 @@
         </p>
 
         <h2>Loja:</h2>
-        <img src="imgApresentacao/FigmaLoja.png" alt="Loja Figma">
-        <img src="" alt="Loja Site Final">
+        <div class="comp">
+            <img src="imgApresentacao/FigmaLoja.png" class="zoomable" alt="Loja Figma">
+            <img src="imgApresentacao/InicioGif.gif" class="zoomable" alt="Loja Site Final"
+                style="width: 70%; height: 600px;">
+        </div>
         <h5>Modificações:</h5>
         <p>No “Header”, os botões ganharam um design mais simples inicialmente, e ganha movimento quando o mouse é
             passado.
@@ -228,8 +251,11 @@
         </p>
 
         <h2>Contato:</h2>
-        <img src="imgApresentacao/FigmaContato.png" alt="Contato Figma">
-        <img src="imgApresentacao/ContatoSite.png" alt="Contato Site Final">
+        <div class="comp">
+            <img src="imgApresentacao/FigmaContato.png" class="zoomable" alt="Contato Figma">
+            <img src="imgApresentacao/ContatoSite.png" class="zoomable" alt="Contato Site Final"
+                style="width: 80%; height: 600px;">
+        </div>
         <h5>Modificações:</h5>
         <p>No “Header”, os botões ganharam um design mais simples inicialmente, e ganha movimento quando o mouse é
             passado.
@@ -243,9 +269,9 @@
         <h2>Páginas Adicionais</h2>
         <p>Foram feitas páginas adicionais, mantendo padrão de Cores, Layout e Design.</p>
         <h5>Serviços:</h5>
-        <img src="imgApresentacao/ServicoSite.png" alt="Serviço Site Final">
+        <img src="imgApresentacao/ServicoSite.png" class="zoomable" alt="Serviço Site Final">
         <h5>Compra:<h5>
-                <img src="imgApresentacao/CompraSite.png" alt="Compra Site Final">
+                <img src="imgApresentacao/CompraSite.png" class="zoomable" alt="Compra Site Final">
     </section>
 
     <section id="conclusao">
@@ -263,14 +289,14 @@
         <h5>Páginas (HTML)</h5>
         <p>A Base dos códigos são “div” e “classes”. Assim conseguimos posicionar, estilizar e formatar da maneira que
             for necessária. Seja através de Css ou Js.</p>
-        <img src="imgApresentacao/PaginasHTML.png" alt="HTML">
+        <img src="imgApresentacao/PaginasHTML.png" class="zoomable" alt="HTML">
         <h5>Páginas (CSS)</h5>
         <p>Temos um Css para cada página e um “root” para ser utilizado de base para todas. O CSS foi usado também para
             dar efeitos ao passar o Mouse por exemplo.</p>
-        <img src="imgApresentacao/PaginasCSS.png" alt="CSS">
+        <img src="imgApresentacao/PaginasCSS.png" class="zoomable" alt="CSS">
         <h5>Páginas (JavaScript)</h5>
         <p>O JS foi usado em poucas páginas, como carrinho e login.</p>
-        <img src="imgApresentacao/PaginasJS.png" alt="JS">
+        <img src="imgApresentacao/PaginasJS.png" class="zoomable" alt="JS">
     </section>
 
     <section id="desenvolvimentoBackend">
@@ -287,10 +313,47 @@
             target="_blank">https://github.com/MestreWalla/Situacao-de-Aprendizagem-3---LMR.git</a>
     </footer>
 
-
     <script>
-        /* JavaScript */
+        document.addEventListener('DOMContentLoaded', function () {
+            var zoomableImages = document.querySelectorAll('.zoomable');
+
+            zoomableImages.forEach(function (image) {
+                image.addEventListener('click', function () {
+                    // Verifica se a imagem está ampliada
+                    var isZoomed = image.classList.contains('zoomed');
+
+                    // Adiciona ou remove a classe 'zoomed' ao clicar na imagem
+                    image.classList.toggle('zoomed');
+
+                    // Se a imagem estiver ampliada, centraliza na tela e ocupa a tela inteira
+                    if (image.classList.contains('zoomed')) {
+                        centerAndExpandImage(image);
+                        image.style.zIndex = 'initial';
+                    } else {
+                        // Se a imagem estiver no tamanho original, remove as transformações
+                        resetImageTransform(image);
+                    }
+                });
+            });
+
+            function centerAndExpandImage(img) {
+                // Código anterior para calcular deslocamento e escala
+
+                // Aplica o deslocamento e a escala à imagem
+                img.style.transform = 'translate(' + offsetX + 'px, ' + offsetY + 'px) scale(' + scale + ')';
+            }
+
+            function resetImageTransform(img) {
+                // Remove as transformações aplicadas à imagem
+                img.style.transform = 'none';
+                img.style.width = 'auto';
+                img.style.height = 'auto';
+                img.style.zIndex = '9999';
+            }
+        });
+
     </script>
+
 
 </body>
 
