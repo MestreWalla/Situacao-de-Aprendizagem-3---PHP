@@ -18,7 +18,7 @@
                 <input type="PESQUISAR" placeholder="BUSCAR">
                 <img src="img/lupa.png" alt="">
             </div>
-            <a href="http://localhost/php/Maycon%20PHP/Situacao-de-Aprendizagem-3---PHP/login.php"><button class="logar" id="logar">
+            <a href="http://localhost/php/Maycon%20PHP/Situacao-de-Aprendizagem-3---PHP/login.php" style="text-decoration: none;"><button class="logar" id="logar">
                     <img src="img/user.png" alt="">
                     <p>Entre ou Cadastre-se</p>
                 </button></a>

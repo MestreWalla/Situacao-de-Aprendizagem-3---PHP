@@ -40,9 +40,11 @@
     border: none;
     padding: 5px;
     gap: 5px;
+    text-decoration: none;
     & p {
         color: var(--text-color);
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
     } &:hover {
         background-color: #6ebbbb;
         & p {
