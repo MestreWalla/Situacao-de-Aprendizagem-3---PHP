@@ -133,7 +133,8 @@
                     echo '<h5>' . $row['nomeProduto'] . '</h5>';
                     echo '<h4>R$' . number_format($row['preco'], 2, ',', '.') . '</h4>';
                     echo '</div>';
-                    echo '<a href="compra.php?id=' . $row['id'] . '">Adicionar</a>';
+                    echo '<a style="background-color:  #239083; color: white; padding: 10px; text-decoration: none; display: inline-block; border-radius: 5px;" href="compra.php?id=' . $row['id'] . '">Adicionar</a>';
+
                     echo '</div>';
                 }
             } else {
