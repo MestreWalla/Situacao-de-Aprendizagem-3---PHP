@@ -178,34 +178,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
-    <header class="header">
+<header class="header">
         <div class="menu01">
             <img src="img/logo.png" alt="Logo">
             <div class="buscar">
                 <input type="PESQUISAR" placeholder="BUSCAR">
                 <img src="img/lupa.png" alt="">
             </div>
-            <a href="http://localhost/php/Maycon%20PHP/SA3PWFE/login.php"><button class="logar" id="logar">
+            <a href="http://localhost/php/Maycon%20PHP/Situacao-de-Aprendizagem-3---PHP/login.php"><button class="logar" id="logar">
                     <img src="img/user.png" alt="">
                     <p>Entre ou Cadastre-se</p>
                 </button></a>
-
+                <button class="hamburguer" onclick="toggleMobileMenu()"><img src="img/hamburguer.png" alt=""></button>
+                <div class="mobile">
+                <a href="PRINCIPAL.html" class="linkMobile">Inicio</a>
+                <a href="http://localhost/php/Maycon%20PHP/Situacao-de-Aprendizagem-3---PHP/loja.php" class="linkMobile">Loja</a>
+                <a href="../serviços.html" class="linkMobile">Serviços</a>
+                <a href="../sobre.html" class="linkMobile">Sobre</a>
+                <a href="http://localhost/php/Maycon%20PHP/Situacao-de-Aprendizagem-3---PHP/login.php" class="linkMobile">Login</a>
+            </div>
         </div>
         <div class="menu02">
-            <a href="index.html" class="menuItem" id="menuItem">
+            <a href="PRINCIPAL.html" class="menuItem" id="menuItem">
                 <img src="img/cao01.png" alt="">
                 <h5>Inicio</h5>
             </a>
-            <a href="loja.html" class="menuItem" id="menuItem">
+            <a href="http://localhost/php/Maycon%20PHP/Situacao-de-Aprendizagem-3---PHP/loja.php" class="menuItem" id="menuItem">
                 <img src="img/cao02.png" alt="">
                 <h5>Loja</h5>
             </a>
-            <a href="serviços.html" class="menuItem" id="menuItem">
+            <a href="../serviços.html" class="menuItem" id="menuItem">
                 <img src="img/cao03.png" alt="">
                 <h5>Serviços</h5>
             </a>
             <a href="sobre.html" class="menuItem" id="menuItem">
-                <img src="img/cao04.png" alt="">
+                <img src="../img/cao04.png" alt="">
                 <h5>Sobre</h5>
             </a>
     </header>

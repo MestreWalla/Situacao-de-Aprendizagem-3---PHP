@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="styles/loja.css">
     <link rel="stylesheet" href="styles/root.css">
     <title>Situalção de Aprendisagem 03</title>
+</style>
 </head>
+
 
 <body>
 <header class="header">
@@ -24,19 +26,19 @@
                 </button></a>
                 <button class="hamburguer" onclick="toggleMobileMenu()"><img src="img/hamburguer.png" alt=""></button>
                 <div class="mobile">
-                <a href="index.html" class="linkMobile">Inicio</a>
-                <a href="loja.html" class="linkMobile">Loja</a>
+                <a href="PRINCIPAL.html" class="linkMobile">Inicio</a>
+                <a href="http://localhost/php/Maycon%20PHP/Situacao-de-Aprendizagem-3---PHP/loja.php" class="linkMobile">Loja</a>
                 <a href="serviços.html" class="linkMobile">Serviços</a>
                 <a href="sobre.html" class="linkMobile">Sobre</a>
                 <a href="http://localhost/php/Maycon%20PHP/Situacao-de-Aprendizagem-3---PHP/login.php" class="linkMobile">Login</a>
             </div>
         </div>
         <div class="menu02">
-            <a href="index.html" class="menuItem" id="menuItem">
+            <a href="PRINCIPAL.html" class="menuItem" id="menuItem">
                 <img src="img/cao01.png" alt="">
                 <h5>Inicio</h5>
             </a>
-            <a href="loja.html" class="menuItem" id="menuItem">
+            <a href="http://localhost/php/Maycon%20PHP/Situacao-de-Aprendizagem-3---PHP/loja.php" class="menuItem" id="menuItem">
                 <img src="img/cao02.png" alt="">
                 <h5>Loja</h5>
             </a>
@@ -49,7 +51,7 @@
                 <h5>Sobre</h5>
             </a>
     </header>
-    
+
     <div class="content">
         <div class="filtros">
             <h3>Filtros</h3>
@@ -105,41 +107,41 @@
         </div>
         <div class="produtos">
             <?php
-$servername = "127.0.0.1";
-$username = "root";
-$password = ''; // Substitua com sua senha
-$dbname = "sa3pwfe";
+            $servername = "127.0.0.1";
+            $username = "root";
+            $password = ''; // Substitua com sua senha
+            $dbname = "sa3pwfe";
 
-// Cria a conexão
-$conn = new mysqli($servername, $username, $password, $dbname);
+            // Cria a conexão
+            $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verifica a conexão
-if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error);
-}
+            // Verifica a conexão
+            if ($conn->connect_error) {
+                die("Conexão falhou: " . $conn->connect_error);
+            }
 
-// Consulta para obter os dados dos produtos
-$sql = "SELECT * FROM produtos";
-$result = $conn->query($sql);
+            // Consulta para obter os dados dos produtos
+            $sql = "SELECT * FROM produtos";
+            $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    // Exibe os produtos
-    while ($row = $result->fetch_assoc()) {
-        echo '<div class="produto">';
-        echo '<img src="' . "Cadastros/" . $row['imgProduto'] . '" alt="">';
-        echo '<div>';
-        echo '<h5>' . $row['nomeProduto'] . '</h5>';
-        echo '<h4>R$' . number_format($row['preco'], 2, ',', '.') . '</h4>';
-        echo '</div>';
-        echo '<a href="compra.php?id=' . $row['id'] . '">Adicionar</a>';
-        echo '</div>';
-    }
-} else {
-    echo "Nenhum produto encontrado.";
-}
+            if ($result->num_rows > 0) {
+                // Exibe os produtos
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="produto">';
+                    echo '<img src="' . "Cadastros/" . $row['imgProduto'] . '" alt="">';
+                    echo '<div>';
+                    echo '<h5>' . $row['nomeProduto'] . '</h5>';
+                    echo '<h4>R$' . number_format($row['preco'], 2, ',', '.') . '</h4>';
+                    echo '</div>';
+                    echo '<a href="compra.php?id=' . $row['id'] . '">Adicionar</a>';
+                    echo '</div>';
+                }
+            } else {
+                echo "Nenhum produto encontrado.";
+            }
 
-$conn->close();
-?>
+            $conn->close();
+            ?>
 
         </div>
     </div>
