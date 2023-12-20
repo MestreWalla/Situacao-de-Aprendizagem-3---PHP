@@ -371,8 +371,6 @@
             });
 
             function centerAndExpandImage(img) {
-                // Código anterior para calcular deslocamento e escala
-
                 // Aplica o deslocamento e a escala à imagem
                 img.style.transform = 'translate(' + offsetX + 'px, ' + offsetY + 'px) scale(' + scale + ')';
             }
@@ -382,7 +380,7 @@
                 img.style.transform = 'none';
                 img.style.width = 'auto';
                 img.style.height = 'auto';
-                img.style.zIndex = '9999';
+                img.style.zIndex = '9999'; //Ficar a cima de tudo
             }
         });
 
